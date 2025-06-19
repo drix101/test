@@ -372,6 +372,40 @@ footer p {
 }
 
 /* Mobile Responsive Styles */
+
+/* Large tablets and small desktops */
+@media screen and (max-width: 1024px) {
+  .container {
+      padding: 0 15px;
+  }
+  
+  .hero h1 {
+      font-size: 42px;
+  }
+  
+  .hero p {
+      font-size: 20px;
+  }
+  
+  .service-cards {
+      gap: 30px;
+  }
+  
+  .card {
+      max-width: 200px;
+  }
+  
+  .result-cards {
+      gap: 50px;
+  }
+  
+  .pentagon-card {
+      width: 170px;
+      height: 170px;
+  }
+}
+
+/* Tablets */
 @media screen and (max-width: 768px) {
   .menu-toggle {
       display: block;
@@ -504,5 +538,145 @@ footer p {
 
   .social-links {
       justify-content: center;
+  }
+}
+
+/* Mobile phones */
+@media screen and (max-width: 480px) {
+  .container {
+      padding: 0 10px;
+  }
+  
+  .header {
+      padding: 10px 0;
+  }
+  
+  .logo img {
+      width: 140px;
+  }
+  
+  .hero {
+      padding: 100px 0 40px;
+  }
+  
+  body.menu-active .hero {
+      padding-top: 250px;
+  }
+  
+  .hero h1 {
+      font-size: 28px;
+      padding: 0 15px;
+  }
+  
+  .hero p {
+      font-size: 14px;
+      padding: 0 15px;
+  }
+  
+  .cta-button {
+      padding: 12px 30px;
+      font-size: 16px;
+  }
+  
+  .what-we-do {
+      padding: 60px 0;
+  }
+  
+  .what-we-do h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+  }
+  
+  .service-cards {
+      gap: 20px;
+  }
+  
+  .card {
+      max-width: 250px;
+  }
+  
+  .card img {
+      width: 40px;
+      height: 40px;
+  }
+  
+  .results {
+      padding: 60px 0;
+  }
+  
+  .results h2 {
+      font-size: 28px;
+  }
+  
+  .result-cards {
+      gap: 20px;
+  }
+  
+  .pentagon-card {
+      width: 120px;
+      height: 120px;
+  }
+  
+  .pentagon-card .percentage {
+      font-size: 28px;
+  }
+  
+  .contact {
+      padding: 60px 0;
+  }
+  
+  .contact form {
+      padding: 0 15px;
+  }
+  
+  .footer {
+      padding: 40px 0;
+  }
+  
+  .copyright {
+      padding: 30px;
+  }
+}
+
+/* Extra small phones */
+@media screen and (max-width: 320px) {
+  .container {
+      padding: 0 8px;
+  }
+  
+  .logo img {
+      width: 120px;
+  }
+  
+  .hero h1 {
+      font-size: 24px;
+      padding: 0 10px;
+  }
+  
+  .hero p {
+      font-size: 13px;
+      padding: 0 10px;
+  }
+  
+  .cta-button {
+      padding: 10px 25px;
+      font-size: 14px;
+  }
+  
+  .service-cards {
+      gap: 15px;
+  }
+  
+  .card {
+      max-width: 200px;
+  }
+  
+  .pentagon-card {
+      width: 100px;
+      height: 100px;
+  }
+  
+  .pentagon-card .percentage {
+      font-size: 24px;
   }
 }
