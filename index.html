@@ -23,6 +23,25 @@
   </div>
 </header>
 
+<!-- Adding a mobile view -->
+<header class="header">
+  <div class="container">
+      <div class="logo">
+          <img src="./images/logo_headphones.png" alt="Headphones logo">
+      </div>
+      <button class="menu-toggle" aria-label="Toggle menu">
+          <span class="hamburger"></span>
+      </button>
+      <nav class="nav">
+          <ul>
+              <li><a href="#">what we do</a></li>
+              <li><a href="#">our results</a></li>
+              <li><a href="#">contact us</a></li>
+          </ul>
+      </nav>
+  </div>
+</header>
+
 <!--  Hero Section -->
   <section class="hero">
     <div class="container">
@@ -32,7 +51,10 @@
 
       <br>
             <br>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut <br>
+              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco <br>
+              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit <br>
+              in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
     </div>
   </section>
   
@@ -40,7 +62,7 @@
   <!-- What we do -->
   <section class="what-we-do">
     <h2>What we do...</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
     <div class="service-cards">
       <div class="card">
         <div class="icon"></div>
@@ -72,37 +94,50 @@
   <!-- Results Section -->
   <section class="results">
     <div class="container">
-    <h2>Our results speak for themselves</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-    <div class="result-cards">
-      <span class="percentage">+2%</span>
-      <p>Lorem ipsum dolor</p>
-      <span class="percentage">+2%</span>
-      <p>Lorem ipsum dolor</p>
-      <span class="percentage">+2%</span>
-      <p>Lorem ipsum dolor</p>
-      <span class="percentage">+2%</span>
-      <p>Lorem ipsum dolor</p>
+        <h2>Our results speak for themselves</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <div class="result-cards">
+            <div class="pentagon-card">
+                <span class="percentage">+2%</span>
+                <p>Lorem ipsum dolor</p>
+            </div>
+            <div class="pentagon-card">
+                <span class="percentage">+2%</span>
+                <p>Lorem ipsum dolor</p>
+            </div>
+            <div class="pentagon-card">
+                <span class="percentage">+2%</span>
+                <p>Lorem ipsum dolor</p>
+            </div>
+            <div class="pentagon-card">
+                <span class="percentage">+2%</span>
+                <p>Lorem ipsum dolor</p>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 
   <!-- Contact -->
   <section class="contact">
+    <div class="container">
     <h2>Contact us</h2>
     <form class="contact-form">
       <input type="text" placeholder="Name" required/>
       <input type="email" placeholder="Email" required/>
-      <textarea placeholder="Your message" required></textarea>
+      <textarea placeholder="Message" required></textarea>
       <button type="submit">Call to Action</button>
     </form>
+  </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="footer-logo">
+    <div class="container">
+    <div class="testing">
     <div class="logo">
       <img src="./images/logo_headphones.png" alt="Headphones logo" class="footer-logo">
+      </div>
+      <div class="social-links">
       <a href="#" target="_blank" aria-label="Instagram"></a>
       <img src="./images/Instagram_White.png" alt="Instagram" class="social-icon">
       <a href="#" target="_blank" aria-label="x-twitter"></a>
@@ -110,8 +145,30 @@
       <a href="#" target="_blank" aria-label="Facebook"></a>
       <img src="./images/Facebook_White.png" alt="Facebook" class="social-icon">
     </div>
-    </div>
-    <p class="copyright">© headphones 2020</p>
+  </div>
+      <p class="copyright">© headphones 2020</p>
+  </div>
   </footer>
+
+  <!-- Javascript -->
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.nav');
+    const hamburger = document.querySelector('.hamburger');
+
+    menuToggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
+
+    // Close menu when clicking on a link
+    document.querySelectorAll('.nav a').forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('active');
+            hamburger.classList.remove('active');
+        });
+    });
+</script>
+
 </body>
 </html>
